@@ -22,10 +22,9 @@ public class GiantSnake extends Monster{
     }
 
     @Override
-    public void attack(){
-        growl(true);
-        super.attack();
-        System.out.println("     ...and hid in the grass");
+    public void attack(Monster monster){
+        monster.damage(getDamage());
+        growl();
     }
 
 }
